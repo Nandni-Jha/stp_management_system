@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:
+        -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell',
+        'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+#root {
+    min-height: 100vh;
+}
+
+/* Mantine DataTable Custom Styling */
+.datatable-custom table {
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.datatable-custom thead tr th {
+    background: linear-gradient(to bottom, #f9fafb, #f3f4f6);
+    color: #374151;
+    font-weight: 600;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 1rem 1.5rem;
+    border-bottom: 2px solid #e5e7eb;
+}
+
+.datatable-custom tbody tr {
+    transition: all 0.2s ease-in-out;
+}
+
+.datatable-custom tbody tr:hover {
+    background-color: #f9fafb;
+    transform: scale(1.001);
+}
+
+.datatable-custom tbody tr td {
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid #f3f4f6;
+    font-size: 0.875rem;
+}
+
+.datatable-custom tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Pagination Styling */
+.datatable-custom [class*='pagination'] {
+    padding: 1rem 1.5rem;
+    border-top: 1px solid #e5e7eb;
+    background: linear-gradient(to bottom, #ffffff, #f9fafb);
+}
+
+.datatable-custom [class*='pagination'] button {
+    border-radius: 0.5rem;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+}
+
+.datatable-custom [class*='pagination'] button:hover:not(:disabled) {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.datatable-custom [class*='pagination'] button[data-active='true'] {
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+    color: white;
+    box-shadow: 0 4px 6px -1px rgba(59, 130, 246, 0.3);
+}
+
+/* Loading State */
+.datatable-custom [class*='loader-container'] {
+    padding: 3rem;
+}
+
+/* Empty State */
+.datatable-custom [class*='empty-state'] {
+    padding: 1rem;
+    color: #6b7280;
+    font-size: 0.875rem;
+}
+
+/* Responsive Table */
+@media (max-width: 768px) {
+    .datatable-custom thead tr th,
+    .datatable-custom tbody tr td {
+        padding: 0.75rem 1rem;
+        font-size: 0.8125rem;
+    }
+}
